@@ -1,3 +1,3 @@
-public class Transaction {
+public abstract class Transaction {
     
 }
