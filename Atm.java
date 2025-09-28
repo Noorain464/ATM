@@ -17,7 +17,7 @@ public class Atm {
     this.bankService = new BankProxy(bankService);
     this.cardReader = new CardReader(new SimpleCardValidation());
     this.cashDispenser = CashDispenser.getInstance();
-    this.cashDispenser.setDispensingStrategy( new DefaultDispensing(cashDispenser.getCashInventory()));
+    this.cashDispenser.setDispensingStrategy( new DefaultDispensing());
     this.printer = new Printer();
 
     idleState = new IdleState(this);

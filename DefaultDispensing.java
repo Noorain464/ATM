@@ -5,11 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DefaultDispensing implements DispensingStrategy {
-    private Map<Integer, Integer> cashInventory;
-
-    public DefaultDispensing(Map<Integer, Integer> cashInventory) {
-        this.cashInventory = cashInventory;
-    }
     @Override
     public void dispense(int amount,Map<Integer, Integer> cashInventory) {
         Map<Integer, Integer> result = new HashMap<>();
