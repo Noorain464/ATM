@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public interface DispensingStrategy {
-    public void dispense(int amount);
+    void dispense(int amount, Map<Integer, Integer> cashInventory);
 }

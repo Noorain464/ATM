@@ -1,7 +1,14 @@
 public class CardReader {
-    public void insertCard(String cardNumber) {
-        
+    private CardValidationStrategy validationStrategy;
+
+    public CardReader(CardValidationStrategy strategy) {
+        this.validationStrategy = strategy;
     }
-    //check if card is valid
-    //Strategy to validate card
+
+    public boolean insertCard(String cardNumber) {
+        return validationStrategy.validate(cardNumber);
+    }
+    public void ejectCard() {
+        System.out.println("Card ejected.");
+    }
 }
